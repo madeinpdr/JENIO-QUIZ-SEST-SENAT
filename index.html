@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" async></script>
+
+  <title>JENIO QUIZ</title>
+</head>
+<style>
+  #timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  /* Add a new style for the instructions button */
+  #instructions-btn {
+    margin-top: 10px;
+  }
+</style>
+<body>
+  <div class="background-image"></div>
+  <div class="quiz-container">
+    <div class="container">
+      <div class="title-container">
+        <h1 class="title">JENIO QUIZ</h1>
+      </div>
+
+      <!-- Instructions Section -->
+      <div id="instructions" class="instructions-container">
+        <h2>Instruções:</h2>
+        <ol>
+          <li>Pressione "Começar Quiz!" para iniciar o jogo.</li>
+          <li>Responda às perguntas selecionando uma das opções.</li>
+          <li>Clique em "Próxima pergunta" para avançar para a próxima pergunta.</li>
+          <li>O tempo de resposta é limitado, então seja rápido!</li>
+          <li>Ao final, veja sua pontuação e compartilhe com seus amigos.</li>
+        </ol>
+      </div>
+
+      <!-- Quiz Section (initially hidden) -->
+      <div id="quiz" class="questions-container hide">
+        <span class="question">Pergunta aqui?</span>
+        <div class="answers-container">
+          <button class="answer button">Resposta 1</button>
+          <button class="answer button">Resposta 2</button>
+          <button class="answer button">Resposta 3</button>
+          <button class="answer button">Resposta 4</button>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <button id="start-btn" class="start-quiz button">Começar Quiz!</button>
+        <button id="next-btn" class="next-question button hide">Próxima pergunta</button>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle button actions and visibility
+    document.getElementById('start-btn').addEventListener('click', function() {
+      document.getElementById('instructions').classList.add('hide');
+      document.getElementById('quiz').classList.remove('hide');
+      document.getElementById('instructions-btn').classList.add('hide');
+    });
+
+    document.getElementById('next-btn').addEventListener('click', function() {
+      // Add logic for the next question
+    });
+  </script>
+</body>
+</html>
